@@ -47,18 +47,19 @@ module.exports.handle = function*(parcelReturn) {
   }
 
   /* Wait for the parcel to ship event until 3 days */
-  const shipped = yield this.wait.event("Shipped").for(duration.seconds(30));
+  const shipped = yield this.wait.event("Shipped").for(duration.days(3));
 
   /* If the user hasn't sent the product in 3 days */
   if (!shipped) {
     /* Start sending reminders  */
+    const days_to_wait = 1;
     const nb_max_reminder = 3;
     let nb_reminder = 0;
     let event = null;
 
     do {
       // Wait for the event Shipped
-      event = yield this.wait.event("Shipped").for(duration.seconds(10));
+      event = yield this.wait.event("Shipped").for(duration.days(days_to_wait));
       if (event === null) {
         yield this.run.task(
           "SendEmail",
