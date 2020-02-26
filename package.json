@@ -1,8 +1,7 @@
 {
-  "name": "zenaton-boilerplate",
+  "name": "product-return",
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/zenaton/zenaton-boilerplate.git",
+  "repository": "https://github.com/zenaton-samples/product-return",
   "license": "MIT",
   "dependencies": {
     "@sendgrid/mail": "^6.5.1",

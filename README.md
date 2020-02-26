@@ -1,4 +1,4 @@
-# Zenaton Project Boilerplate
+# Zenaton Samples - Product Return Workflow
 
 This Workflow optimizes a customer product return process by automating internal processes and interfacing with external services: a shipping company, Sengrid, Zendesk and TrustPilot API. This workflow automates a customer product return by generating and sending information to the customer and then sending status updates and notifications to the customer and internal team when events occur - or trigger other actions if they don't occur.
 
@@ -26,7 +26,7 @@ First, install dependencies:
 npm install
 ```
 
-then, fill-in `ZENATON_APP_ID` and `ZENATON_API_TOKEN` in the `.env` file.
+then, fill-in `ZENATON_APP_ID` and `ZENATON_API_TOKEN` in the `.env` file. You will also need to fill in your SendGrid API key (`SENDGRID_API_KEY`), and your ZenDesk information: `ZENDESK_SUBDOMAIN`, `ZENDESK_API_TOKEN`, `ZENDESK_EMAIL`.
 
 Install a Zenaton Agent:
 
@@ -48,7 +48,7 @@ Create your `.env` file
 cp -n .env.sample .env
 ```
 
-and fill-in `ZENATON_APP_ID` and `ZENATON_API_TOKEN` in it.
+and fill-in `ZENATON_APP_ID` and `ZENATON_API_TOKEN` in it. You will also need to fill in your SendGrid API key (`SENDGRID_API_KEY`), and your ZenDesk information: `ZENDESK_SUBDOMAIN`, `ZENDESK_API_TOKEN`, `ZENDESK_EMAIL`.
 
 Then start your container:
 

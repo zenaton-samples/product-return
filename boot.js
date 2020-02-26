@@ -14,9 +14,8 @@ task(
   require("./tasks/AssignSupportOperatorZendesk")
 );
 task("GetParcelData", require("./tasks/GetParcelData"));
-const SendEmail = require("./Tasks/SendEmailWithSendgrid_axios");
-// const SendEmail = require("./Tasks/SendEmailWithSendgrid_sdk");
-task("SendEmail", SendEmail);
+task("SendEmail", require("./tasks/SendEmailWithSendgrid_axios"));
+// task("SendEmail", require("./tasks/SendEmailWithSendgrid_sdk"));
 
 // define workflows
 workflow(
